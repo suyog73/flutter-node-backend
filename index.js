@@ -119,7 +119,7 @@ mongoose.connect(url, {
 
             try {
                 const data = await Product.findByIdAndDelete(id);
-                res.json({
+                  res.json({
                     "status_code": 204,
                     "status": `Deleted the product ${data.pname} with id ${data.id} from db`,
                 });
@@ -141,5 +141,5 @@ mongoose.connect(url, {
 
 
 app.listen(3000, () => {
-    console.log("Connected to server at 3000");
+    console.log("Connected to server at 3000 or hosted on reder");
 })
