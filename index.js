@@ -1,6 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+require('dotenv').config();
+
 const Product = require('./product_schema');
 
 const app = express();
@@ -8,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-var url = "mongodb+srv://suyog732002:suyog73@cluster0.e45yyvu.mongodb.net/flutternode";
+var url = process.env.MongoURL;
 
 // db
 
